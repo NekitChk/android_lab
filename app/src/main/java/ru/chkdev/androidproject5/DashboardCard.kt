@@ -1,6 +1,5 @@
 package ru.chkdev.androidproject5
 
-import android.view.RoundedCorner
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -40,7 +39,7 @@ fun DashboardCard (
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 16.dp)
-                );
+                )
             Row (
                 modifier = Modifier
                     .fillMaxWidth()
@@ -62,12 +61,12 @@ fun DashboardCard (
                         Text(orders,
                             fontSize = 24.sp,
                             fontWeight = FontWeight.Bold
-                        );
+                        )
                         Text("Orders",
                             fontSize = 14.sp,
                             color = Color.Gray,
                             modifier = Modifier.padding(top = 4.dp)
-                        );
+                        )
                     }
                 }
                 Card(
@@ -85,12 +84,12 @@ fun DashboardCard (
                         Text(conversion,
                             fontSize = 24.sp,
                             fontWeight = FontWeight.Bold
-                        );
+                        )
                         Text("Conversion",
                             fontSize = 14.sp,
                             color = Color.Gray,
                             modifier = Modifier.padding(top = 4.dp)
-                        );
+                        )
                     }
                 }
             }
@@ -109,16 +108,16 @@ fun DashboardCard (
                     Text("Revenue",
                         fontSize = 14.sp,
                         color = Color.Gray,
-                    );
+                    )
                     Text(revenue,
                         fontSize = 24.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(top = 4.dp)
-                    );
+                    )
                 }
             }
-        };
-    };
+        }
+    }
 }
 
 @Preview(showBackground = true)
