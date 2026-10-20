@@ -16,6 +16,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun DashboardCard (
@@ -42,12 +44,12 @@ fun DashboardCard (
             Row (
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 16.dp)
+                    .padding(bottom = 16.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
             ){
                 Card (
                     modifier = Modifier
                         .weight(1f)
-                        .padding(end = 8.dp)
                         .border(1.dp, Color(0xFFE5E7EB), RoundedCornerShape(12.dp)),
                     shape = RoundedCornerShape(12.dp)
                 ) {
@@ -71,7 +73,6 @@ fun DashboardCard (
                 Card(
                     modifier = Modifier
                         .weight(1f)
-                        .padding(end = 8.dp)
                         .border(1.dp, Color(0xFFE5E7EB), RoundedCornerShape(12.dp)),
                     shape = RoundedCornerShape(12.dp)
                 ) {
@@ -118,4 +119,14 @@ fun DashboardCard (
             }
         };
     };
+}
+
+@Preview(showBackground = true)
+@Composable
+fun DashboardPreview(){
+    DashboardCard(
+        orders = "124",
+        conversion = "82%",
+        revenue = "124 500 ₽"
+    )
 }
